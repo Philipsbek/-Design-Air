@@ -1,0 +1,210 @@
+---
+import '../styles/global.css';
+
+const features = [
+  { id: 'search', label: 'Conversational Search', eyebrow: 'Find without folders', title: 'Find anything. Even if you cannot name it.', copy: 'Describe a color, a mood, a face, or a half-remembered campaign. AER understands the context and surfaces the right work in seconds.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85' },
+  { id: 'insight', label: 'Performance Intelligence', eyebrow: 'Know what works', title: 'See what resonates, then make more of it.', copy: 'Connect creative work to audience signals. Your team sees the patterns behind top-performing ideas before the next brief begins.', image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=85' },
+  { id: 'canvas', label: 'AI Design & Editing', eyebrow: 'Create at scale', title: 'Describe the outcome. Canvas handles the rest.', copy: 'Resize, adapt, and refine approved work for every channel while your library, visual system, and brand rules stay in context.', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=85' },
+];
+
+const capabilityCards = [
+  ['Canvas', 'Make it once, then shape it for every channel with brand-aware creative tools.', 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1100&q=80'],
+  ['Smart Search', 'Search by feeling, object, palette, person, or the way you remember the moment.', 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1100&q=80'],
+  ['Reviews', 'Comments, versions, decisions, and approvals live directly beside the work.', 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1100&q=80'],
+  ['Intelligence', 'Every asset becomes organized and understandable the moment it arrives.', 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1100&q=80'],
+  ['Libraries', 'Flexible spaces keep campaigns, teams, and permissions simple at any scale.', 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1100&q=80'],
+  ['Collection', 'Gather high-resolution work from anyone with a beautifully simple upload portal.', 'https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1100&q=80'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="AER is an intelligent workspace for ambitious creative teams." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>AER — Creative work, in flow</title>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <div class="nav-left desktop-nav">
+          <a href="#platform">Platform <span>⌄</span></a><a href="#workflow">Solutions <span>⌄</span></a><a href="#plans">Pricing</a><a href="#journal">Resources <span>⌄</span></a><a href="#about">About</a>
+        </div>
+        <a class="brand" href="#top" aria-label="AER home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.7 16.5 12 7l4.3 9.5M9.3 13.1h5.4"/></svg>
+          <span>AER</span>
+        </a>
+        <div class="nav-actions desktop-nav"><a href="#contact">Login</a><a class="button button-light" href="#contact">Start free</a><a class="button button-ghost" href="#contact">Book a demo</a></div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu"><a href="#platform">Platform</a><a href="#workflow">Solutions</a><a href="#plans">Pricing</a><a href="#journal">Resources</a><a href="#about">About</a><a class="button button-light" href="#contact">Book a demo</a></div>
+    </header>
+
+    <main id="top">
+      <section class="hero atmospheric">
+        <div class="hero-content">
+          <h1 class="reveal delay-1">Your agent for creative flow</h1>
+          <p class="reveal delay-2">Intelligence that understands your brand, organizes every idea, and helps your team scale what deserves to be made.</p>
+          <a class="button button-light reveal delay-3" href="#platform">Get some space</a>
+        </div>
+        <div class="product-stage agent-video reveal delay-4" data-parallax>
+          <div class="agent-demo" data-agent-demo data-phase="0" aria-label="Looping demonstration of the AER agent completing a creative task">
+            <div class="demo-toolbar">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="demo-title"><span class="demo-mark">A</span><span>AER Agent</span></div>
+              <button class="demo-toggle" type="button" aria-label="Pause workflow animation" aria-pressed="false"><span class="pause-icon">Ⅱ</span><span class="play-icon">▶</span></button>
+            </div>
+            <div class="demo-layout">
+              <aside class="demo-sidebar">
+                <p>Workflow</p>
+                <ol>
+                  <li data-demo-step="0"><i></i><span><b>Receive brief</b><small>Understand the task</small></span></li>
+                  <li data-demo-step="1"><i></i><span><b>Search library</b><small>Find approved assets</small></span></li>
+                  <li data-demo-step="2"><i></i><span><b>Select direction</b><small>Match brand context</small></span></li>
+                  <li data-demo-step="3"><i></i><span><b>Generate variants</b><small>Adapt every channel</small></span></li>
+                  <li data-demo-step="4"><i></i><span><b>Deliver work</b><small>Ready for review</small></span></li>
+                </ol>
+              </aside>
+              <div class="demo-canvas">
+                <div class="agent-status"><span class="status-pulse"></span><span data-demo-status>Reading the creative brief…</span><em>Working</em></div>
+                <div class="brief-card">
+                  <span>Creative request</span>
+                  <p>Build a launch set for the new footwear campaign using approved summer assets.</p>
+                  <div class="brief-tags"><i>Instagram</i><i>Story</i><i>Display</i></div>
+                </div>
+                <div class="asset-workspace">
+                  <div class="source-assets">
+                    <figure><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=85" alt="Red footwear source asset" /><span>Approved</span></figure>
+                    <figure><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=85" alt="Fashion source asset" /><span>Campaign</span></figure>
+                    <figure><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=85" alt="Product source asset" /><span>Product</span></figure>
+                  </div>
+                  <div class="generation-line"><span></span><i>Applying brand system</i></div>
+                  <div class="generated-set">
+                    <figure class="variant-square"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=85" alt="Generated square campaign variant" /><figcaption>1:1</figcaption></figure>
+                    <figure class="variant-story"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=85" alt="Generated story campaign variant" /><figcaption>9:16</figcaption></figure>
+                    <figure class="variant-wide"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=85" alt="Generated wide campaign variant" /><figcaption>16:9</figcaption></figure>
+                  </div>
+                  <div class="complete-card"><span>✓</span><div><b>Campaign set ready</b><small>3 on-brand variants created</small></div></div>
+                </div>
+                <div class="demo-progress"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom-fade"></div>
+      </section>
+
+      <section class="trust section-dark reveal-section">
+        <p>Where remarkable creative teams do their best work</p>
+        <div class="logo-row"><span>ROSETTA</span><span>MONUMENT</span><span>ARC’TERYX</span><span>SONOS</span><span>APERTURE</span><span>notion</span></div>
+      </section>
+
+      <section class="feature-lab section-dark" id="platform">
+        <div class="section-heading reveal-section"><p class="eyebrow">One intelligent workspace</p><h2>Meet your team’s <em>creative memory.</em></h2></div>
+        <div class="tabs" role="tablist">
+          {features.map((f, index) => <button class:list={{active:index===0}} role="tab" aria-selected={index===0 ? 'true':'false'} data-tab={f.id}>{f.label}</button>)}
+        </div>
+        <div class="feature-panels">
+          {features.map((f, index) => <article class:list={['feature-panel',{active:index===0}]} data-panel={f.id}>
+            <div class="feature-copy"><p class="eyebrow">{f.eyebrow}</p><h3>{f.title}</h3><p>{f.copy}</p><a class="underline-link" href="#contact">Explore the feature</a></div>
+            <div class="feature-visual"><img src={f.image} alt="" loading="lazy" /><div class="floating-query">⌕ “Show me the quiet blue campaign”</div></div>
+          </article>)}
+        </div>
+      </section>
+
+      <section class="statement atmospheric-alt reveal-section" id="workflow">
+        <div class="statement-copy"><p class="eyebrow">Built for momentum</p><h2>Creativity,<br/><em>unblocked.</em></h2><p>Organize the work. Decide what matters. Multiply the strongest idea across every channel.</p></div>
+      </section>
+
+      <section class="capabilities section-dark">
+        <div class="section-heading reveal-section"><p class="eyebrow">Everything in one current</p><h2>From first spark to <em>final file.</em></h2></div>
+        <div class="capability-grid">
+          {capabilityCards.map((card, i) => <article class="capability-card reveal-section"><div class="capability-image"><img src={card[2]} alt="" loading="lazy" /><span>0{i+1}</span></div><h3>{card[0]}</h3><p>{card[1]}</p><a href="#contact" aria-label={`Learn about ${card[0]}`}>↗</a></article>)}
+        </div>
+      </section>
+
+      <section class="models section-light" id="plans">
+        <div class="models-copy reveal-section"><p class="eyebrow">One plan. Every possibility.</p><h2>Whatever the work calls for, <em>it’s in.</em></h2><p>Bring your favorite creative models into one workspace. No disconnected subscriptions, no context switching, no lost brand knowledge.</p><a class="button button-ink" href="#contact">Try the canvas</a></div>
+        <div class="orbital" aria-hidden="true"><div class="orbit orbit-a"><i></i><i></i><i></i></div><div class="orbit orbit-b"><i></i><i></i><i></i></div><div class="orbit-core">N</div></div>
+      </section>
+
+      <section class="marquee-section section-dark" id="journal">
+        <div class="marquee"><div>UNDERSTAND · ORGANIZE · SCALE · UNDERSTAND · ORGANIZE · SCALE · </div><div>UNDERSTAND · ORGANIZE · SCALE · UNDERSTAND · ORGANIZE · SCALE · </div></div>
+        <div class="process-grid">
+          <article><span>01</span><h3>Understand</h3><p>Build context from your assets, visual language, performance signals, and team decisions.</p></article>
+          <article><span>02</span><h3>Organize</h3><p>Keep every version findable, every conversation attached, and every approval current.</p></article>
+          <article><span>03</span><h3>Scale</h3><p>Turn approved work into channel-ready variations without starting over or drifting off brand.</p></article>
+        </div>
+      </section>
+
+      <section class="contact section-light" id="contact">
+        <div class="contact-intro reveal-section"><p class="eyebrow">Let the ideas breathe</p><h2>Make room for your team’s <em>best work.</em></h2><p>Tell us what slows your process down. We’ll show you a calmer way through it.</p></div>
+        <form class="contact-form" novalidate>
+          <label>First name<input required name="first" placeholder="First name*" /></label><label>Last name<input required name="last" placeholder="Last name*" /></label>
+          <label class="wide">Work email<input required type="email" name="email" placeholder="Email address*" /></label>
+          <label>Team size<select required name="size"><option value="">Company size*</option><option>1–10</option><option>11–50</option><option>51–200</option><option>201–1000</option><option>1000+</option></select></label>
+          <label>Primary goal<select required name="goal"><option value="">What do you need?*</option><option>Asset management</option><option>Creative approvals</option><option>Campaign production</option><option>Brand consistency</option></select></label>
+          <label class="wide">Message<textarea name="message" placeholder="Tell us about your creative workflow"></textarea></label>
+          <button class="button button-ink wide" type="submit">Request a walkthrough</button><p class="form-status wide" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer section-dark" id="about"><a class="footer-mark" href="#top">AER</a><div class="footer-links"><a href="#platform">Platform</a><a href="#workflow">Solutions</a><a href="#plans">Pricing</a><a href="#journal">Journal</a><a href="#contact">Contact</a></div><p>AER Studio © 2026</p></footer>
+    <div class="announcement"><span><em>New!</em> The motion workspace is here.</span><a href="#platform">See what’s new</a><button aria-label="Dismiss announcement">×</button></div>
+
+    <script>
+      const header = document.querySelector('.site-header');
+      const menuButton = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      menuButton?.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); mobileMenu?.classList.toggle('open', !open); });
+      mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menuButton?.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); }));
+      window.addEventListener('scroll', () => header?.classList.toggle('scrolled', scrollY > 40), {passive:true});
+      const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in-view'); }), {threshold:.12});
+      document.querySelectorAll('.reveal-section').forEach(el => observer.observe(el));
+      document.querySelectorAll('[data-tab]').forEach(button => button.addEventListener('click', () => {
+        document.querySelectorAll('[data-tab]').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        document.querySelectorAll('[data-panel]').forEach(p => p.classList.remove('active'));
+        button.classList.add('active'); button.setAttribute('aria-selected','true');
+        document.querySelector(`[data-panel="${button.dataset.tab}"]`)?.classList.add('active');
+      }));
+      const glow = document.querySelector('.cursor-glow');
+      window.addEventListener('pointermove', e => { if(glow instanceof HTMLElement){ glow.style.transform = `translate(${e.clientX - 180}px,${e.clientY - 180}px)`; } }, {passive:true});
+      window.addEventListener('scroll', () => { const el = document.querySelector('[data-parallax]'); if(el instanceof HTMLElement) el.style.transform = `translateY(${Math.min(scrollY*.08,48)}px)`; }, {passive:true});
+      document.querySelector('.announcement button')?.addEventListener('click', e => e.currentTarget?.parentElement?.classList.add('dismissed'));
+      const workflowStatuses = ['Reading the creative brief…','Searching 2,840 approved assets…','Choosing the strongest direction…','Generating channel-ready variants…','Campaign set ready for review'];
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll<HTMLElement>('[data-agent-demo]').forEach(demo => {
+        let phase = reduceMotion ? 4 : 0;
+        let timer: number | undefined;
+        const toggle = demo.querySelector<HTMLButtonElement>('.demo-toggle');
+        const status = demo.querySelector<HTMLElement>('[data-demo-status]');
+        const statusMode = demo.querySelector<HTMLElement>('.agent-status em');
+        const progress = demo.querySelector<HTMLElement>('.demo-progress span');
+        const renderPhase = () => {
+          demo.dataset.phase = String(phase);
+          if(status) status.textContent = workflowStatuses[phase];
+          if(statusMode) statusMode.textContent = phase === 4 ? 'Complete' : 'Working';
+          if(progress) progress.style.width = `${(phase + 1) * 20}%`;
+          demo.querySelectorAll<HTMLElement>('[data-demo-step]').forEach((step, index) => {
+            step.classList.toggle('active', index === phase);
+            step.classList.toggle('done', index < phase);
+          });
+        };
+        const play = () => { if(reduceMotion) return; window.clearInterval(timer); timer = window.setInterval(() => { phase = (phase + 1) % 5; renderPhase(); }, 2300); };
+        renderPhase(); play();
+        toggle?.addEventListener('click', () => {
+          const paused = demo.classList.toggle('is-paused');
+          toggle.setAttribute('aria-pressed', String(paused));
+          toggle.setAttribute('aria-label', paused ? 'Play workflow animation' : 'Pause workflow animation');
+          if(paused) window.clearInterval(timer); else play();
+        });
+      });
+      const form = document.querySelector('.contact-form');
+      form?.addEventListener('submit', e => { e.preventDefault(); const status = form.querySelector('.form-status'); if(!(form instanceof HTMLFormElement)) return; if(!form.checkValidity()){ form.reportValidity(); if(status) status.textContent='Please complete the required fields.'; return; } if(status) status.textContent='Thank you — your walkthrough request is ready.'; form.reset(); });
+    </script>
+  </body>
+</html>
